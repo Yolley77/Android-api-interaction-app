@@ -3,11 +3,11 @@ package com.example.lab2
 import android.os.Parcel
 import android.os.Parcelable
 
-class Item(var graphics: String, var name: String, var helptext : String?) : Parcelable {
+class Item(var graphic: String, var name: String, var helptext : String?) : Parcelable {
 
-    override fun writeToParcel(parcel: Parcel, flags: Int) {
+    override fun writeToParcel(parcel: Parcel?, flags: Int) {
         if (parcel != null) {
-            parcel.writeString(graphics)
+            parcel.writeString(graphic)
             parcel.writeString(name)
             parcel.writeString(helptext)
         }
@@ -19,10 +19,10 @@ class Item(var graphics: String, var name: String, var helptext : String?) : Par
 
     companion object CREATOR : Parcelable.Creator<Item> {
         override fun createFromParcel(parcel: Parcel): Item {
-            val graphics = parcel.readString()
+            val graphic = parcel.readString()
             val name = parcel.readString()
             val helptext = parcel.readString()
-            return Item(graphics, name, helptext)
+            return Item(graphic, name, helptext)
         }
 
         override fun newArray(size: Int): Array<Item?> {

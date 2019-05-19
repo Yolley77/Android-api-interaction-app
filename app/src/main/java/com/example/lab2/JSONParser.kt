@@ -12,6 +12,10 @@ import java.net.MalformedURLException
 import java.net.URL
 import java.util.ArrayList
 
+val DATA_URL: String = "https://raw.githubusercontent.com/wesleywerner" +
+        "/ancient-tech/02decf875616dd9692b31658d92e64a20d99f816" +
+        "/src/data/techs.ruleset.json"
+
 class JSONParser {
 
     fun getJSON() : ArrayList<Item> {

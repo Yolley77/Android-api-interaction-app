@@ -9,6 +9,6 @@
     <ImageView
             android:src="@android:drawable/star_big_on"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" android:id="@+id/splash" app:srcCompat="@drawable/samurai2"
+            android:layout_height="match_parent" android:id="@+id/splash"
             android:scaleType="centerCrop"/>
 </FrameLayout>
